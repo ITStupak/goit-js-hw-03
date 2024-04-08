@@ -1,7 +1,11 @@
 "use strict";
 
-
-
+function slugify(title) {
+    const newTitle = title.toLowerCase();
+    const words = newTitle.split(" ");
+    const slug = words.join("-");
+    return slug;
+}
 
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
